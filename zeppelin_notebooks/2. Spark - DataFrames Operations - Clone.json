@@ -1,0 +1,2881 @@
+{
+  "paragraphs": [
+    {
+      "title": "Import Libraries",
+      "text": "from pyspark.sql.functions import *\nfrom pyspark.sql.types import *",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:43:43 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533568083707_-1288024034",
+      "id": "20180806-150803_10527047_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 6, 2018 3:08:03 PM",
+      "dateSubmitted": "Mar 18, 2019 9:43:43 AM",
+      "dateStarted": "Mar 18, 2019 9:43:43 AM",
+      "dateFinished": "Mar 18, 2019 9:43:43 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Bucket Name",
+      "text": "bucket \u003d \u003cYOUR_BUCKET\u003e # Replace \"YOUR_BUCKET\" with your Bucket.",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 25, 2019 1:20:45 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1552407314439_122880722",
+      "id": "20190312-161514_671770449_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Mar 12, 2019 4:15:14 PM",
+      "dateSubmitted": "Mar 18, 2019 9:43:45 AM",
+      "dateStarted": "Mar 18, 2019 9:43:45 AM",
+      "dateFinished": "Mar 18, 2019 9:43:45 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Create DataFrame from HIVE table",
+      "text": "tbl_name \u003d \"tpcds_orc_3000.customer\"\ncustomer \u003d spark.table(tbl_name).sort(\"c_customer_sk\").limit(10000)\nc \u003d [\u0027c_customer_sk\u0027, \u0027c_birth_day\u0027, \u0027c_birth_year\u0027, \u0027c_birth_country\u0027, \u0027c_last_review_date\u0027, \u0027c_birth_month\u0027]",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:45:03 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [],
+        "numCompletedTasks": 0,
+        "numTasks": 0,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533563074337_280839203",
+      "id": "20180806-134434_374646930_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 6, 2018 1:44:34 PM",
+      "dateSubmitted": "Mar 18, 2019 9:45:03 AM",
+      "dateStarted": "Mar 18, 2019 9:45:03 AM",
+      "dateFinished": "Mar 18, 2019 9:45:05 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Count records in DF",
+      "text": "customer.count()\n# 30M",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:45:28 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 15,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d15",
+            "numTasks": 15,
+            "numCompletedTasks": 15,
+            "stages": [
+              {
+                "id": 16,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d16\u0026attempt\u003d0",
+                "numCompleteTasks": 14,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 14
+              },
+              {
+                "id": 17,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d17\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 15,
+        "numTasks": 15,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533567549019_-1968429179",
+      "id": "20180806-145909_1873152821_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 6, 2018 2:59:09 PM",
+      "dateSubmitted": "Mar 18, 2019 9:45:28 AM",
+      "dateStarted": "Mar 18, 2019 9:45:28 AM",
+      "dateFinished": "Mar 18, 2019 9:45:36 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Check Columns",
+      "text": "customer.columns",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:45:59 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533567439789_1218491933",
+      "id": "20180806-145719_1642343941_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 6, 2018 2:57:19 PM",
+      "dateSubmitted": "Mar 18, 2019 9:45:59 AM",
+      "dateStarted": "Mar 18, 2019 9:45:59 AM",
+      "dateFinished": "Mar 18, 2019 9:45:59 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Check datatypes of columns",
+      "text": "customer.dtypes",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:46:17 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533567544103_1250780192",
+      "id": "20180806-145904_528902549_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 6, 2018 2:59:04 PM",
+      "dateSubmitted": "Mar 18, 2019 9:46:18 AM",
+      "dateStarted": "Mar 18, 2019 9:46:18 AM",
+      "dateFinished": "Mar 18, 2019 9:46:18 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Check Schema for DF",
+      "text": "customer.schema",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:47:04 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533567791658_-1845554195",
+      "id": "20180806-150311_1875649031_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 6, 2018 3:03:11 PM",
+      "dateSubmitted": "Mar 18, 2019 9:47:04 AM",
+      "dateStarted": "Mar 18, 2019 9:47:04 AM",
+      "dateFinished": "Mar 18, 2019 9:47:04 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Print Schema for DF",
+      "text": "customer.printSchema()",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:48:16 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533567831850_1820946293",
+      "id": "20180806-150351_890084340_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 6, 2018 3:03:51 PM",
+      "dateSubmitted": "Mar 18, 2019 9:48:16 AM",
+      "dateStarted": "Mar 18, 2019 9:48:16 AM",
+      "dateFinished": "Mar 18, 2019 9:48:16 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Select Particular Column",
+      "text": "customer.select(\"c_customer_sk\", \"c_customer_id\").show(5)",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:49:36 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 16,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d16",
+            "numTasks": 15,
+            "numCompletedTasks": 15,
+            "stages": [
+              {
+                "id": 19,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d19\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              },
+              {
+                "id": 18,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d18\u0026attempt\u003d0",
+                "numCompleteTasks": 14,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 14
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 15,
+        "numTasks": 15,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533567858072_2007195409",
+      "id": "20180806-150418_2079502875_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 6, 2018 3:04:18 PM",
+      "dateSubmitted": "Mar 18, 2019 9:49:36 AM",
+      "dateStarted": "Mar 18, 2019 9:49:37 AM",
+      "dateFinished": "Mar 18, 2019 9:49:43 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Filter DF",
+      "text": "customer.filter(col(\"c_customer_sk\") \u003d\u003d \"1\").select(\u0027c_customer_sk\u0027, \u0027c_customer_id\u0027).show()\n#customer.where(customer[\"c_customer_sk\"] \u003d\u003d \"1\").select(\u0027c_customer_sk\u0027, \u0027c_customer_id\u0027).show()",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:51:23 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 17,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d17",
+            "numTasks": 15,
+            "numCompletedTasks": 15,
+            "stages": [
+              {
+                "id": 20,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d20\u0026attempt\u003d0",
+                "numCompleteTasks": 14,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 14
+              },
+              {
+                "id": 21,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d21\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 15,
+        "numTasks": 15,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533567925691_-2066633215",
+      "id": "20180806-150525_1760832390_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 6, 2018 3:05:25 PM",
+      "dateSubmitted": "Mar 18, 2019 9:51:23 AM",
+      "dateStarted": "Mar 18, 2019 9:51:23 AM",
+      "dateFinished": "Mar 18, 2019 9:51:26 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Rename Column",
+      "text": "customer.withColumnRenamed(\"c_customer_id\", \"cust_id\").select(\"c_customer_sk\", \"cust_id\").show(3)",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:51:59 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 18,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d18",
+            "numTasks": 15,
+            "numCompletedTasks": 15,
+            "stages": [
+              {
+                "id": 22,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d22\u0026attempt\u003d0",
+                "numCompleteTasks": 14,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 14
+              },
+              {
+                "id": 23,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d23\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 15,
+        "numTasks": 15,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533568009286_-1720405177",
+      "id": "20180806-150649_1902717888_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 6, 2018 3:06:49 PM",
+      "dateSubmitted": "Mar 18, 2019 9:51:59 AM",
+      "dateStarted": "Mar 18, 2019 9:51:59 AM",
+      "dateFinished": "Mar 18, 2019 9:52:04 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Question ?",
+      "text": "customer.select(\"c_customer_sk\", \"cust_id\").show(3)",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:52:32 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1543571721425_-733862568",
+      "id": "20181130-095521_1793852988_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Nov 30, 2018 9:55:21 AM",
+      "dateSubmitted": "Mar 18, 2019 9:52:32 AM",
+      "dateStarted": "Mar 18, 2019 9:52:32 AM",
+      "dateFinished": "Mar 18, 2019 9:52:32 AM",
+      "status": "ERROR",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Drop Columns",
+      "text": "temp_customer \u003d customer.select([\u0027c_customer_sk\u0027, \u0027c_customer_id\u0027, \u0027c_current_cdemo_sk\u0027, \u0027c_current_hdemo_sk\u0027, \u0027c_current_addr_sk\u0027]).drop(\"c_customer_sk\")\ntemp_customer.columns",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:53:15 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533568813462_-1691586760",
+      "id": "20180806-152013_228410956_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 6, 2018 3:20:13 PM",
+      "dateSubmitted": "Mar 18, 2019 9:53:15 AM",
+      "dateStarted": "Mar 18, 2019 9:53:15 AM",
+      "dateFinished": "Mar 18, 2019 9:53:15 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Question ?",
+      "text": "customer.drop(\"c_customer_sk\")\ncustomer.select(\"c_customer_sk\").show(5)",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:53:21 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 19,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d19",
+            "numTasks": 15,
+            "numCompletedTasks": 15,
+            "stages": [
+              {
+                "id": 24,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d24\u0026attempt\u003d0",
+                "numCompleteTasks": 14,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 14
+              },
+              {
+                "id": 25,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d25\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 15,
+        "numTasks": 15,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1543573413738_-2145148369",
+      "id": "20181130-102333_1663541617_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Nov 30, 2018 10:23:33 AM",
+      "dateSubmitted": "Mar 18, 2019 9:53:21 AM",
+      "dateStarted": "Mar 18, 2019 9:53:21 AM",
+      "dateFinished": "Mar 18, 2019 9:53:22 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Distinct",
+      "text": "customer.select(\"c_birth_year\").distinct().count()",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:53:34 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 19,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.198%3A8088%2Fproxy%2Fapplication_1552846460090_0001/jobs/job?spark\u003dtrue\u0026id\u003d19",
+            "numTasks": 15,
+            "numCompletedTasks": 15,
+            "stages": [
+              {
+                "id": 25,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.198%3A8088%2Fproxy%2Fapplication_1552846460090_0001/stages/stage/?id\u003d25\u0026attempt\u003d0",
+                "numCompleteTasks": 14,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 14
+              },
+              {
+                "id": 26,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.198%3A8088%2Fproxy%2Fapplication_1552846460090_0001/stages/stage/?id\u003d26\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 15,
+        "numTasks": 15,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533630187967_-1734686327",
+      "id": "20180807-082307_375543621_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 7, 2018 8:23:07 AM",
+      "dateSubmitted": "Mar 17, 2019 6:20:00 PM",
+      "dateStarted": "Mar 17, 2019 6:20:02 PM",
+      "dateFinished": "Mar 17, 2019 6:20:04 PM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "groupBy",
+      "text": "grp_cust \u003d customer.groupBy(\"c_birth_year\")\ngrp_cust.sum().show(5)\n# More aggregate functions : count, sum, min, max, avg. ",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:55:28 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 21,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d21",
+            "numTasks": 15,
+            "numCompletedTasks": 15,
+            "stages": [
+              {
+                "id": 28,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d28\u0026attempt\u003d0",
+                "numCompleteTasks": 14,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 14
+              },
+              {
+                "id": 29,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d29\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 15,
+        "numTasks": 15,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533630473270_-1707355476",
+      "id": "20180807-082753_1068766692_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 7, 2018 8:27:53 AM",
+      "dateSubmitted": "Mar 18, 2019 9:55:28 AM",
+      "dateStarted": "Mar 18, 2019 9:55:29 AM",
+      "dateFinished": "Mar 18, 2019 9:55:32 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Aggregations : count, sum, max, min and avg",
+      "text": "grp_cust \u003d customer.groupBy(\"c_birth_year\").agg(\n                                                count(\"c_customer_sk\").alias(\"agg_count\"), \n                                                sum(\"c_customer_sk\").alias(\"sum\"), \n                                                max(\"c_customer_sk\").alias(\"max\"),\n                                                min(\"c_customer_sk\").alias(\"min\"),\n                                                avg(\"c_customer_sk\").alias(\"avg\")).show()\n",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:56:06 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 22,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d22",
+            "numTasks": 15,
+            "numCompletedTasks": 15,
+            "stages": [
+              {
+                "id": 30,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d30\u0026attempt\u003d0",
+                "numCompleteTasks": 14,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 14
+              },
+              {
+                "id": 31,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d31\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 15,
+        "numTasks": 15,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533630566460_-1550099921",
+      "id": "20180807-082926_507713747_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 7, 2018 8:29:26 AM",
+      "dateSubmitted": "Mar 18, 2019 9:56:06 AM",
+      "dateStarted": "Mar 18, 2019 9:56:06 AM",
+      "dateFinished": "Mar 18, 2019 9:56:08 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Sorting : asc",
+      "text": "customer.select(\u0027c_customer_sk\u0027, \u0027c_customer_id\u0027, \u0027c_current_cdemo_sk\u0027, \u0027c_birth_year\u0027).sort(col(\"c_customer_sk\")).show(5)",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:56:31 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 23,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d23",
+            "numTasks": 15,
+            "numCompletedTasks": 15,
+            "stages": [
+              {
+                "id": 33,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d33\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              },
+              {
+                "id": 32,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d32\u0026attempt\u003d0",
+                "numCompleteTasks": 14,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 14
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 15,
+        "numTasks": 15,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533631413249_-479901980",
+      "id": "20180807-084333_1708872519_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 7, 2018 8:43:33 AM",
+      "dateSubmitted": "Mar 18, 2019 9:56:31 AM",
+      "dateStarted": "Mar 18, 2019 9:56:31 AM",
+      "dateFinished": "Mar 18, 2019 9:56:33 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Sorting : desc",
+      "text": "# ASC : By Default\n#customer.select(\u0027c_customer_sk\u0027, \u0027c_customer_id\u0027, \u0027c_current_cdemo_sk\u0027, \u0027c_birth_year\u0027).sort(\"c_customer_sk\").show(5)\n\n# DESC\ncustomer.select(\u0027c_customer_id\u0027, \u0027c_current_cdemo_sk\u0027, \u0027c_birth_year\u0027, \u0027c_customer_sk\u0027).sort(desc(\"c_birth_year\")).show(5)\n# https://spark.apache.org/docs/latest/api/python/pyspark.sql.html#pyspark.sql.Column.asc_nulls_first",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:56:51 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 24,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d24",
+            "numTasks": 15,
+            "numCompletedTasks": 15,
+            "stages": [
+              {
+                "id": 34,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d34\u0026attempt\u003d0",
+                "numCompleteTasks": 14,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 14
+              },
+              {
+                "id": 35,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d35\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 15,
+        "numTasks": 15,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533631771852_117747166",
+      "id": "20180807-084931_427465051_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 7, 2018 8:49:31 AM",
+      "dateSubmitted": "Mar 18, 2019 9:56:51 AM",
+      "dateStarted": "Mar 18, 2019 9:56:51 AM",
+      "dateFinished": "Mar 18, 2019 9:56:53 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Derived Columns",
+      "text": "customer.withColumn(\"Age\", 2018 - customer.c_birth_year).select(\"c_birth_year\", \"Age\").show(5)",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:57:49 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 25,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d25",
+            "numTasks": 15,
+            "numCompletedTasks": 15,
+            "stages": [
+              {
+                "id": 37,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d37\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              },
+              {
+                "id": 36,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d36\u0026attempt\u003d0",
+                "numCompleteTasks": 14,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 14
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 15,
+        "numTasks": 15,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1543574250016_1307041524",
+      "id": "20181130-103730_1146903019_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Nov 30, 2018 10:37:30 AM",
+      "dateSubmitted": "Mar 18, 2019 9:57:50 AM",
+      "dateStarted": "Mar 18, 2019 9:57:50 AM",
+      "dateFinished": "Mar 18, 2019 9:57:51 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Load Few more Tables",
+      "text": "tbl_name \u003d \"tpcds_orc_3000.Store_sales\"\nstore_sales \u003d spark.table(tbl_name)\n\ntbl_name \u003d \"tpcds_orc_3000.Date_dim\"\ndate_dim \u003d spark.table(tbl_name)",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:58:04 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [],
+        "numCompletedTasks": 0,
+        "numTasks": 0,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533630926121_-696405053",
+      "id": "20180807-083526_106717209_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 7, 2018 8:35:26 AM",
+      "dateSubmitted": "Mar 18, 2019 9:58:04 AM",
+      "dateStarted": "Mar 18, 2019 9:58:04 AM",
+      "dateFinished": "Mar 18, 2019 9:58:04 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Count Records",
+      "text": "#print store_sales.count() # 8639936081\n#print date_dim.count() # 73049",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:58:12 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533632566778_-575636582",
+      "id": "20180807-090246_1456996587_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 7, 2018 9:02:46 AM",
+      "dateSubmitted": "Mar 17, 2019 6:20:16 PM",
+      "dateStarted": "Mar 17, 2019 6:20:16 PM",
+      "dateFinished": "Mar 17, 2019 6:20:16 PM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "JOINS : Inner",
+      "text": "result_inner \u003d store_sales.join(date_dim, store_sales[\"ss_sold_date_sk\"] \u003d\u003d date_dim[\"d_date_sk\"])\n#result_inner.count()",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 9:58:37 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 46,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.198%3A8088%2Fproxy%2Fapplication_1552846460090_0001/jobs/job?spark\u003dtrue\u0026id\u003d46",
+            "numTasks": 802,
+            "numCompletedTasks": 802,
+            "stages": [
+              {
+                "id": 63,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.198%3A8088%2Fproxy%2Fapplication_1552846460090_0001/stages/stage/?id\u003d63\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              },
+              {
+                "id": 64,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.198%3A8088%2Fproxy%2Fapplication_1552846460090_0001/stages/stage/?id\u003d64\u0026attempt\u003d0",
+                "numCompleteTasks": 200,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 200
+              },
+              {
+                "id": 65,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.198%3A8088%2Fproxy%2Fapplication_1552846460090_0001/stages/stage/?id\u003d65\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              },
+              {
+                "id": 62,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.198%3A8088%2Fproxy%2Fapplication_1552846460090_0001/stages/stage/?id\u003d62\u0026attempt\u003d0",
+                "numCompleteTasks": 600,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 600
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 802,
+        "numTasks": 802,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533631333233_1127670869",
+      "id": "20180807-084213_1796307790_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 7, 2018 8:42:13 AM",
+      "dateSubmitted": "Mar 17, 2019 6:26:17 PM",
+      "dateStarted": "Mar 17, 2019 6:26:17 PM",
+      "dateFinished": "Mar 17, 2019 6:29:37 PM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Other Joins",
+      "text": "# df1.join(df2, on\u003dNone, how\u003dNone)\n# how – str, default inner. Must be one of: inner, cross, outer, full, full_outer, left, left_outer, right, right_outer, left_semi, and left_anti.",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:00:04 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533631376167_-941077994",
+      "id": "20180807-084256_882122414_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 7, 2018 8:42:56 AM",
+      "dateSubmitted": "Mar 17, 2019 6:20:16 PM",
+      "dateStarted": "Mar 17, 2019 6:20:16 PM",
+      "dateFinished": "Mar 17, 2019 6:20:16 PM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Describe",
+      "text": "z.show(customer.select(c).describe())",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:00:48 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 27,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d27",
+            "numTasks": 15,
+            "numCompletedTasks": 15,
+            "stages": [
+              {
+                "id": 40,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d40\u0026attempt\u003d0",
+                "numCompleteTasks": 14,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 14
+              },
+              {
+                "id": 41,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d41\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 15,
+        "numTasks": 15,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1543571454578_1910918340",
+      "id": "20181130-095054_566971886_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Nov 30, 2018 9:50:54 AM",
+      "dateSubmitted": "Mar 18, 2019 10:00:48 AM",
+      "dateStarted": "Mar 18, 2019 10:00:48 AM",
+      "dateFinished": "Mar 18, 2019 10:00:51 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Summary",
+      "text": "z.show(customer.select(c).summary())\n# New in version 2.3.0",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:01:21 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 28,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d28",
+            "numTasks": 15,
+            "numCompletedTasks": 15,
+            "stages": [
+              {
+                "id": 42,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d42\u0026attempt\u003d0",
+                "numCompleteTasks": 14,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 14
+              },
+              {
+                "id": 43,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d43\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 15,
+        "numTasks": 15,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1543571463783_-1643007250",
+      "id": "20181130-095103_625045735_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Nov 30, 2018 9:51:03 AM",
+      "dateSubmitted": "Mar 18, 2019 10:01:21 AM",
+      "dateStarted": "Mar 18, 2019 10:01:21 AM",
+      "dateFinished": "Mar 18, 2019 10:01:24 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Register DF as Temp Table",
+      "text": "date_dim.createOrReplaceTempView(\"date\")",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:02:12 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533634258056_398936195",
+      "id": "20180807-093058_1149803119_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 7, 2018 9:30:58 AM",
+      "dateSubmitted": "Mar 18, 2019 10:02:12 AM",
+      "dateStarted": "Mar 18, 2019 10:02:12 AM",
+      "dateFinished": "Mar 18, 2019 10:02:12 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Execute SQL Like Queries",
+      "text": "%sql\nselect * from date limit 10",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:02:28 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "d_date_sk",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "d_date_id",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "d_date_sk",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "d_date_id",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true,
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 29,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d29",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 44,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d44\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 1,
+        "numTasks": 1,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533634750717_1991889110",
+      "id": "20180807-093910_1542913988_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 7, 2018 9:39:10 AM",
+      "dateSubmitted": "Mar 18, 2019 10:02:28 AM",
+      "dateStarted": "Mar 18, 2019 10:02:28 AM",
+      "dateFinished": "Mar 18, 2019 10:02:29 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "save DataFrame as HIVE table",
+      "text": "date_dim.write.saveAsTable(\"training.date_dim_temp\", mode \u003d \"overwrite\")\n# mode – one of append, overwrite, error, errorifexists, ignore (default: error)\n# S3 Location : \u003cwarehouse_dir\u003e/training.db",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:05:15 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 30,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d30",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 45,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d45\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 1,
+        "numTasks": 1,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533634963833_-1486550720",
+      "id": "20180807-094243_188061152_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 7, 2018 9:42:43 AM",
+      "dateSubmitted": "Mar 18, 2019 10:05:15 AM",
+      "dateStarted": "Mar 18, 2019 10:05:15 AM",
+      "dateFinished": "Mar 18, 2019 10:05:22 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Check DDL",
+      "text": "%sql\ndesc formatted training.date_dim_temp",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:05:41 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorHide": false,
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [],
+        "numCompletedTasks": 0,
+        "numTasks": 0,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1543582042133_165771111",
+      "id": "20181130-124722_2078915271_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Nov 30, 2018 12:47:22 PM",
+      "dateSubmitted": "Mar 18, 2019 10:05:41 AM",
+      "dateStarted": "Mar 18, 2019 10:05:41 AM",
+      "dateFinished": "Mar 18, 2019 10:05:41 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "save DataFrame as HIVE table as Partition Table",
+      "text": "date_dim.write.saveAsTable(\"training.date_dim_temp_part\", mode \u003d \"overwrite\", partitionBy \u003d [\"d_year\"])\n# mode – one of append, overwrite, error, errorifexists, ignore (default: error)\n# \u003cwarehouse_dir\u003e/training.db/date_dim_temp_part",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:06:47 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 31,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d31",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 46,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d46\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          },
+          {
+            "id": 32,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d32",
+            "numTasks": 201,
+            "numCompletedTasks": 201,
+            "stages": [
+              {
+                "id": 47,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d47\u0026attempt\u003d0",
+                "numCompleteTasks": 201,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 201
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 202,
+        "numTasks": 202,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1533635341191_1517352509",
+      "id": "20180807-094901_47992199_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 7, 2018 9:49:01 AM",
+      "dateSubmitted": "Mar 18, 2019 10:06:48 AM",
+      "dateStarted": "Mar 18, 2019 10:06:48 AM",
+      "dateFinished": "Mar 18, 2019 10:08:04 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Check DDL",
+      "text": "%sql\ndescribe formatted training.date_dim_temp_part",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:08:44 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "col_name",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "data_type",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "col_name",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "data_type",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true,
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [],
+        "numCompletedTasks": 0,
+        "numTasks": 0,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1538990094296_-1418517950",
+      "id": "20181008-091454_81907953_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Oct 8, 2018 9:14:54 AM",
+      "dateSubmitted": "Mar 18, 2019 10:08:44 AM",
+      "dateStarted": "Mar 18, 2019 10:08:44 AM",
+      "dateFinished": "Mar 18, 2019 10:08:44 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "save DataFrame as HIVE External table",
+      "text": "date_dim.write.saveAsTable(\"training.date_dim_ext\", mode \u003d \"overwrite\", path\u003d\"s3://{0}/qubole-defloc/nbhadani/external\".format(bucket))",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:09:43 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 33,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d33",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 48,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d48\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 1,
+        "numTasks": 1,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1538989055407_1003008429",
+      "id": "20181008-085735_456918775_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Oct 8, 2018 8:57:35 AM",
+      "dateSubmitted": "Mar 18, 2019 10:09:43 AM",
+      "dateStarted": "Mar 18, 2019 10:09:43 AM",
+      "dateFinished": "Mar 18, 2019 10:09:48 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Check DDL",
+      "text": "%sql\ndescribe formatted training.date_dim_ext",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:10:02 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "col_name",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "data_type",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "col_name",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "data_type",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true,
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [],
+        "numCompletedTasks": 0,
+        "numTasks": 0,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1538990058600_-1343353996",
+      "id": "20181008-091418_1031217784_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Oct 8, 2018 9:14:18 AM",
+      "dateSubmitted": "Mar 18, 2019 10:10:02 AM",
+      "dateStarted": "Mar 18, 2019 10:10:02 AM",
+      "dateFinished": "Mar 18, 2019 10:10:02 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Write DataFrame as CSV",
+      "text": "customer.select(c).write.csv(\u003cPATH\u003e), sep\u003d\"|\", header\u003dTrue, mode\u003d\"overwrite\") # TODO : Change \"PATH\" to the location where you would like to save csv file.",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 25, 2019 1:22:28 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 34,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d34",
+            "numTasks": 15,
+            "numCompletedTasks": 15,
+            "stages": [
+              {
+                "id": 49,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d49\u0026attempt\u003d0",
+                "numCompleteTasks": 14,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 14
+              },
+              {
+                "id": 50,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d50\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 15,
+        "numTasks": 15,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1535639836908_675451117",
+      "id": "20180830-143716_860643793_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 30, 2018 2:37:16 PM",
+      "dateSubmitted": "Mar 18, 2019 10:11:28 AM",
+      "dateStarted": "Mar 18, 2019 10:11:28 AM",
+      "dateFinished": "Mar 18, 2019 10:11:32 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Create Data Frame from CSV - 1",
+      "text": "raw_data \u003d spark.read.csv(\u003cPATH\u003e), sep\u003d\"|\", header\u003dTrue)  # TODO : Change \"PATH\" to the location where you would like to read csv file.\nraw_data.show(5)",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 25, 2019 1:22:28 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 35,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d35",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 51,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d51\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          },
+          {
+            "id": 36,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d36",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 52,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d52\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 2,
+        "numTasks": 2,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1535388890217_-2122481120",
+      "id": "20180827-165450_1577455578_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Aug 27, 2018 4:54:50 PM",
+      "dateSubmitted": "Mar 18, 2019 10:11:57 AM",
+      "dateStarted": "Mar 18, 2019 10:11:57 AM",
+      "dateFinished": "Mar 18, 2019 10:11:59 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Check Schema",
+      "text": "raw_data.printSchema()",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:12:17 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1538987589778_-575667738",
+      "id": "20181008-083309_1584964086_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Oct 8, 2018 8:33:09 AM",
+      "dateSubmitted": "Mar 18, 2019 10:12:17 AM",
+      "dateStarted": "Mar 18, 2019 10:12:17 AM",
+      "dateFinished": "Mar 18, 2019 10:12:17 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Create Data Frame from CSV - 2",
+      "text": "raw_data \u003d spark.read.csv(\u003cPATH\u003e), sep\u003d\"|\", header\u003dTrue, inferSchema\u003dTrue) # TODO : Change \"PATH\" to the location where you would like to read csv file.\nraw_data.show(5)\n# Note : it will scan all the records to infer the schema and will slowdown the data loading process.",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 25, 2019 1:23:45 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 37,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d37",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 53,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d53\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          },
+          {
+            "id": 38,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d38",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 54,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d54\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          },
+          {
+            "id": 39,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d39",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 55,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d55\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 3,
+        "numTasks": 3,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1538987661326_740614089",
+      "id": "20181008-083421_1955547842_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Oct 8, 2018 8:34:21 AM",
+      "dateSubmitted": "Mar 18, 2019 10:12:46 AM",
+      "dateStarted": "Mar 18, 2019 10:12:46 AM",
+      "dateFinished": "Mar 18, 2019 10:12:48 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Check Schema",
+      "text": "raw_data.printSchema()",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:12:53 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1538987704720_1098122438",
+      "id": "20181008-083504_602625121_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Oct 8, 2018 8:35:04 AM",
+      "dateSubmitted": "Mar 18, 2019 10:12:53 AM",
+      "dateStarted": "Mar 18, 2019 10:12:53 AM",
+      "dateFinished": "Mar 18, 2019 10:12:53 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Create Schema",
+      "text": "schema \u003d StructType(\n            [StructField(\"c_customer_sk\",IntegerType(),True),\n            StructField(\"c_birth_day\",IntegerType(),True),\n            StructField(\"c_birth_year\",IntegerType(),True),\n            StructField(\"c_birth_country\",StringType(),True),\n            StructField(\"c_last_review_date\",IntegerType(),True),\n            StructField(\"c_birth_month\",IntegerType(),True)])",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:13:48 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1538987757817_-305948892",
+      "id": "20181008-083557_1404592141_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Oct 8, 2018 8:35:57 AM",
+      "dateSubmitted": "Mar 18, 2019 10:13:48 AM",
+      "dateStarted": "Mar 18, 2019 10:13:48 AM",
+      "dateFinished": "Mar 18, 2019 10:13:48 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Create Data Frame from CSV - 3",
+      "text": "raw_data \u003d spark.read.csv(\u003cPATH\u003e), schema\u003dschema, sep\u003d\"|\", header\u003dTrue) # TODO : Change \"PATH\" to the location where you would like to read csv file.\nraw_data.show(5)",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 25, 2019 1:23:45 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 40,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d40",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 56,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d56\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 1,
+        "numTasks": 1,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1538988120449_1446720265",
+      "id": "20181008-084200_132550213_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Oct 8, 2018 8:42:00 AM",
+      "dateSubmitted": "Mar 18, 2019 10:13:50 AM",
+      "dateStarted": "Mar 18, 2019 10:13:50 AM",
+      "dateFinished": "Mar 18, 2019 10:13:50 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Check Schema",
+      "text": "raw_data.printSchema()\n# Ref : https://spark.apache.org/docs/latest/api/python/pyspark.sql.html#pyspark.sql.DataFrameReader.csv",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:13:53 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1538988103357_-1217897375",
+      "id": "20181008-084143_1321759403_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Oct 8, 2018 8:41:43 AM",
+      "dateSubmitted": "Mar 18, 2019 10:13:54 AM",
+      "dateStarted": "Mar 18, 2019 10:13:54 AM",
+      "dateFinished": "Mar 18, 2019 10:13:54 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "My SQL Endpoint and Password",
+      "text": "endpoint \u003d \u003cHOST:PORT\u003e # TODO : Replace with your HOST and PORT Number.\npassword \u003d \u003cpassword\u003e # TODO : Replace with your password.",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 25, 2019 1:23:45 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1552407613775_-1570806362",
+      "id": "20190312-162013_1130695706_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Mar 12, 2019 4:20:13 PM",
+      "dateSubmitted": "Mar 18, 2019 10:14:00 AM",
+      "dateStarted": "Mar 18, 2019 10:14:00 AM",
+      "dateFinished": "Mar 18, 2019 10:14:00 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "read Data from mySQL",
+      "text": "url \u003d \u0027jdbc:mysql://{0}/qubole\u0027.format(endpoint)\nmysql_df \u003d spark.read.format(\u0027jdbc\u0027).options(\n      url\u003durl,\n      driver\u003d\u0027com.mysql.jdbc.Driver\u0027,\n      dbtable\u003d \u0027test\u0027,\n      user\u003d\u0027admin\u0027,\n      password \u003d password).load()",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:15:56 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1538989215256_-1730385675",
+      "id": "20181008-090015_206098797_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Oct 8, 2018 9:00:15 AM",
+      "dateSubmitted": "Mar 18, 2019 10:15:56 AM",
+      "dateStarted": "Mar 18, 2019 10:15:56 AM",
+      "dateFinished": "Mar 18, 2019 10:15:56 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Verify DataFrame",
+      "text": "mysql_df.count()",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:15:59 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "d_date_sk",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "d_date_id",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "d_date_sk",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "d_date_id",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 43,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d43",
+            "numTasks": 2,
+            "numCompletedTasks": 2,
+            "stages": [
+              {
+                "id": 60,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d60\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              },
+              {
+                "id": 61,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d61\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 2,
+        "numTasks": 2,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1543571072104_516435084",
+      "id": "20181130-094432_1158733609_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Nov 30, 2018 9:44:32 AM",
+      "dateSubmitted": "Mar 18, 2019 10:15:59 AM",
+      "dateStarted": "Mar 18, 2019 10:15:59 AM",
+      "dateFinished": "Mar 18, 2019 10:16:00 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "save Result to mySQL",
+      "text": "url \u003d \u0027jdbc:mysql://{0}/qubole\u0027.format(endpoint)\nmysql_df.write.format(\u0027jdbc\u0027).options(\n      url\u003durl,\n      driver\u003d\u0027com.mysql.jdbc.Driver\u0027,\n      dbtable\u003d \u0027test\u0027,\n      user\u003d\u0027admin\u0027,\n      password \u003d password).mode(\u0027append\u0027).save()",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:15:36 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 42,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d42",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 59,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d59\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 1,
+        "numTasks": 1,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1538989213081_2120966139",
+      "id": "20181008-090013_1206347703_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Oct 8, 2018 9:00:13 AM",
+      "dateSubmitted": "Mar 18, 2019 10:15:36 AM",
+      "dateStarted": "Mar 18, 2019 10:15:36 AM",
+      "dateFinished": "Mar 18, 2019 10:15:49 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Read Data From Parquet File",
+      "text": "df \u003d spark.read.parquet(\u003cPATH\u003e) # TODO : Change \"PATH\" to the location where you would like to read parquet file.\nz.show(df)",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 25, 2019 1:24:48 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "d_date_sk",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "d_date_id",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "d_date_sk",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "d_date_id",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 44,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d44",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 62,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d62\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          },
+          {
+            "id": 45,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d45",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 63,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d63\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 2,
+        "numTasks": 2,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1543570283554_-1815944149",
+      "id": "20181130-093123_615608281_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Nov 30, 2018 9:31:23 AM",
+      "dateSubmitted": "Mar 18, 2019 10:16:26 AM",
+      "dateStarted": "Mar 18, 2019 10:16:26 AM",
+      "dateFinished": "Mar 18, 2019 10:16:30 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Write Data to Parquet File",
+      "text": "df.write.parquet(\u003cPATH\u003e), mode\u003d\"overwrite\") # TODO : Change \"PATH\" to the location where you would like to write parquet file.",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 25, 2019 1:24:48 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 43,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.198%3A8088%2Fproxy%2Fapplication_1552846460090_0001/jobs/job?spark\u003dtrue\u0026id\u003d43",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 59,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.198%3A8088%2Fproxy%2Fapplication_1552846460090_0001/stages/stage/?id\u003d59\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 1,
+        "numTasks": 1,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1543570301654_-511984154",
+      "id": "20181130-093141_196396651_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Nov 30, 2018 9:31:41 AM",
+      "dateSubmitted": "Mar 17, 2019 6:22:09 PM",
+      "dateStarted": "Mar 17, 2019 6:22:12 PM",
+      "dateFinished": "Mar 17, 2019 6:22:15 PM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Write Data to Parquet File. Partition By Year",
+      "text": "df.write.parquet(\u003cPATH\u003e), mode\u003d\"overwrite\", partitionBy\u003d\u0027d_year\u0027) # TODO : Change \"PATH\" to the location where you would like to write parquet file.",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 25, 2019 1:24:48 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 44,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.198%3A8088%2Fproxy%2Fapplication_1552846460090_0001/jobs/job?spark\u003dtrue\u0026id\u003d44",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 60,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.198%3A8088%2Fproxy%2Fapplication_1552846460090_0001/stages/stage/?id\u003d60\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 1,
+        "numTasks": 1,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1543570309752_567251835",
+      "id": "20181130-093149_1993262330_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Nov 30, 2018 9:31:49 AM",
+      "dateSubmitted": "Mar 17, 2019 6:22:12 PM",
+      "dateStarted": "Mar 17, 2019 6:22:15 PM",
+      "dateFinished": "Mar 17, 2019 6:23:01 PM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "text": "",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 7:37:45 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v0",
+      "jobName": "paragraph_1552407792229_1974763666",
+      "id": "20190312-162312_430504606_q_MB925PSQ1Z1552406455",
+      "dateCreated": "Mar 12, 2019 4:23:12 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    }
+  ],
+  "name": "2. Spark - DataFrames Operations - Clone",
+  "id": "MB925PSQ1Z1552406455",
+  "angularObjects": {
+    "2DU5CSQPA769741541523108762:shared_process": [],
+    "2DVU5K6XH769741541580060799:shared_process": [],
+    "2DU4QRYJZ769741541523108764:shared_process": [],
+    "2DWSX3YE2769741541523108759:shared_process": []
+  },
+  "config": {
+    "isDashboard": false,
+    "defaultLang": "pyspark"
+  },
+  "info": {},
+  "source": "FCN"
+}

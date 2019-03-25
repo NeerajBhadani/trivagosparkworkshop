@@ -1,0 +1,1013 @@
+{
+  "paragraphs": [
+    {
+      "title": "Import Required Libraries",
+      "text": "from pyspark.sql.functions import *",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:32:55 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1536222097124_-570381442",
+      "id": "20180906-082137_1835808571_q_CKRUX2KZ2F1552408472",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Sep 6, 2018 8:21:37 AM",
+      "dateSubmitted": "Mar 18, 2019 10:32:55 AM",
+      "dateStarted": "Mar 18, 2019 10:32:55 AM",
+      "dateFinished": "Mar 18, 2019 10:32:55 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Sample Data",
+      "text": "{\n\t\"id\": \"0001\",\n\t\"type\": \"donut\",\n\t\"name\": \"Cake\",\n\t\"ppu\": 0.55,\n\t\"batters\":\n\t\t{\n\t\t\t\"batter\":\n\t\t\t\t[\n\t\t\t\t\t{ \"id\": \"1001\", \"type\": \"Regular\" },\n\t\t\t\t\t{ \"id\": \"1002\", \"type\": \"Chocolate\" },\n\t\t\t\t\t{ \"id\": \"1003\", \"type\": \"Blueberry\" },\n\t\t\t\t\t{ \"id\": \"1004\", \"type\": \"Devil\u0027s Food\" }\n\t\t\t\t]\n\t\t},\n\t\"topping\":\n\t\t[\n\t\t\t{ \"id\": \"5001\", \"type\": \"None\" },\n\t\t\t{ \"id\": \"5002\", \"type\": \"Glazed\" },\n\t\t\t{ \"id\": \"5005\", \"type\": \"Sugar\" },\n\t\t\t{ \"id\": \"5007\", \"type\": \"Powdered Sugar\" },\n\t\t\t{ \"id\": \"5006\", \"type\": \"Chocolate with Sprinkles\" },\n\t\t\t{ \"id\": \"5003\", \"type\": \"Chocolate\" },\n\t\t\t{ \"id\": \"5004\", \"type\": \"Maple\" }\n\t\t]\n}",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:32:57 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "editorHide": false,
+        "title": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1544454288264_-1041109212",
+      "id": "20181210-150448_1051267363_q_CKRUX2KZ2F1552408472",
+      "dateCreated": "Dec 10, 2018 3:04:48 PM",
+      "dateSubmitted": "Mar 18, 2019 7:41:50 AM",
+      "dateStarted": "Mar 18, 2019 7:41:52 AM",
+      "dateFinished": "Mar 18, 2019 7:41:52 AM",
+      "status": "FINISHED",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Read Sample JSON File",
+      "text": "rawDF \u003d spark.read.json(\u003cPATH\u003e), multiLine \u003d \"true\") # TODO : Change PATH to location where you would like to read json file.\n# Note : Store \n# Ref : https://spark.apache.org/docs/latest/api/python/pyspark.sql.html#pyspark.sql.DataFrameReader.json",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 25, 2019 1:27:05 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d62"
+          ],
+          "interpreterSettingId": "2DVU5K6XH769741541580060799"
+        }
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 62,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d62",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 101,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d101\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 1,
+        "numTasks": 1,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1544454256117_-435376525",
+      "id": "20181210-150416_94073792_q_CKRUX2KZ2F1552408472",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Dec 10, 2018 3:04:16 PM",
+      "dateSubmitted": "Mar 18, 2019 10:33:56 AM",
+      "dateStarted": "Mar 18, 2019 10:33:56 AM",
+      "dateFinished": "Mar 18, 2019 10:33:56 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Print Schema",
+      "text": "rawDF.printSchema()",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:34:26 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1544454366927_-1403988721",
+      "id": "20181210-150606_444582954_q_CKRUX2KZ2F1552408472",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "root\n |-- batters: struct (nullable \u003d true)\n |    |-- batter: array (nullable \u003d true)\n |    |    |-- element: struct (containsNull \u003d true)\n |    |    |    |-- id: string (nullable \u003d true)\n |    |    |    |-- type: string (nullable \u003d true)\n |-- id: string (nullable \u003d true)\n |-- name: string (nullable \u003d true)\n |-- ppu: double (nullable \u003d true)\n |-- topping: array (nullable \u003d true)\n |    |-- element: struct (containsNull \u003d true)\n |    |    |-- id: string (nullable \u003d true)\n |    |    |-- type: string (nullable \u003d true)\n |-- type: string (nullable \u003d true)\n\n"
+      },
+      "dateCreated": "Dec 10, 2018 3:06:06 PM",
+      "dateSubmitted": "Mar 18, 2019 10:34:26 AM",
+      "dateStarted": "Mar 18, 2019 10:34:26 AM",
+      "dateFinished": "Mar 18, 2019 10:34:26 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Rename ID to Key",
+      "text": "sampleDF \u003d rawDF.withColumnRenamed(\"id\", \"key\")\nfoodDF \u003d sampleDF.select(\"key\", \"ppu\", \"name\", \"type\")",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:34:57 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v1",
+      "jobName": "paragraph_1544456051138_1987161249",
+      "id": "20181210-153411_690160143_q_CKRUX2KZ2F1552408472",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Dec 10, 2018 3:34:11 PM",
+      "dateSubmitted": "Mar 18, 2019 10:34:57 AM",
+      "dateStarted": "Mar 18, 2019 10:34:57 AM",
+      "dateFinished": "Mar 18, 2019 10:34:57 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Select \"batters\" columns",
+      "text": "bat \u003d sampleDF.select(\"key\", \"batters\")\nbat.printSchema()\nbat.show(1, False)",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:35:17 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d63"
+          ],
+          "interpreterSettingId": "2DVU5K6XH769741541580060799"
+        }
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 63,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d63",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 102,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d102\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 1,
+        "numTasks": 1,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1544454915446_-1881865468",
+      "id": "20181210-151515_983869148_q_CKRUX2KZ2F1552408472",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "root\n |-- key: string (nullable \u003d true)\n |-- batters: struct (nullable \u003d true)\n |    |-- batter: array (nullable \u003d true)\n |    |    |-- element: struct (containsNull \u003d true)\n |    |    |    |-- id: string (nullable \u003d true)\n |    |    |    |-- type: string (nullable \u003d true)\n\n+----+-------------------------------------------------------------------------------+\n|key |batters                                                                        |\n+----+-------------------------------------------------------------------------------+\n|0001|[[[1001, Regular], [1002, Chocolate], [1003, Blueberry], [1004, Devil\u0027s Food]]]|\n+----+-------------------------------------------------------------------------------+\n\n"
+      },
+      "dateCreated": "Dec 10, 2018 3:15:15 PM",
+      "dateSubmitted": "Mar 18, 2019 10:35:17 AM",
+      "dateStarted": "Mar 18, 2019 10:35:17 AM",
+      "dateFinished": "Mar 18, 2019 10:35:18 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Select \"batters.batter\"",
+      "text": "tempDF \u003d sampleDF.select(\"key\", \"batters.batter\")\ntempDF.printSchema()\ntempDF.show(10, False)",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:35:58 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d64"
+          ],
+          "interpreterSettingId": "2DVU5K6XH769741541580060799"
+        }
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 64,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d64",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 103,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d103\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 1,
+        "numTasks": 1,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1544455450914_818465421",
+      "id": "20181210-152410_837287699_q_CKRUX2KZ2F1552408472",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "root\n |-- key: string (nullable \u003d true)\n |-- batter: array (nullable \u003d true)\n |    |-- element: struct (containsNull \u003d true)\n |    |    |-- id: string (nullable \u003d true)\n |    |    |-- type: string (nullable \u003d true)\n\n+----+-----------------------------------------------------------------------------+\n|key |batter                                                                       |\n+----+-----------------------------------------------------------------------------+\n|0001|[[1001, Regular], [1002, Chocolate], [1003, Blueberry], [1004, Devil\u0027s Food]]|\n+----+-----------------------------------------------------------------------------+\n\n"
+      },
+      "dateCreated": "Dec 10, 2018 3:24:10 PM",
+      "dateSubmitted": "Mar 18, 2019 10:35:58 AM",
+      "dateStarted": "Mar 18, 2019 10:35:58 AM",
+      "dateFinished": "Mar 18, 2019 10:35:58 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Select id element from \"batters.batter\"",
+      "text": "sampleDF.select(\"key\", \"batters.batter.id\").show(10, False)",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:36:14 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d65"
+          ],
+          "interpreterSettingId": "2DVU5K6XH769741541580060799"
+        }
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 65,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d65",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 104,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d104\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 1,
+        "numTasks": 1,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1544456756103_-884006899",
+      "id": "20181210-154556_276755428_q_CKRUX2KZ2F1552408472",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "+----+------------------------+\n|key |id                      |\n+----+------------------------+\n|0001|[1001, 1002, 1003, 1004]|\n+----+------------------------+\n\n"
+      },
+      "dateCreated": "Dec 10, 2018 3:45:56 PM",
+      "dateSubmitted": "Mar 18, 2019 10:36:14 AM",
+      "dateStarted": "Mar 18, 2019 10:36:14 AM",
+      "dateFinished": "Mar 18, 2019 10:36:14 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Creating a row for each element : explode",
+      "text": "tempDF \u003d sampleDF.select(\"key\", explode(\"batters.batter\"))\ntempDF.show()\ntempDF.printSchema()",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:36:28 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d66"
+          ],
+          "interpreterSettingId": "2DVU5K6XH769741541580060799"
+        }
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 66,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d66",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 105,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d105\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 1,
+        "numTasks": 1,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1544455585529_-22059328",
+      "id": "20181210-152625_631507012_q_CKRUX2KZ2F1552408472",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "+----+--------------------+\n| key|                 col|\n+----+--------------------+\n|0001|     [1001, Regular]|\n|0001|   [1002, Chocolate]|\n|0001|   [1003, Blueberry]|\n|0001|[1004, Devil\u0027s Food]|\n+----+--------------------+\n\nroot\n |-- key: string (nullable \u003d true)\n |-- col: struct (nullable \u003d true)\n |    |-- id: string (nullable \u003d true)\n |    |-- type: string (nullable \u003d true)\n\n"
+      },
+      "dateCreated": "Dec 10, 2018 3:26:25 PM",
+      "dateSubmitted": "Mar 18, 2019 10:36:28 AM",
+      "dateStarted": "Mar 18, 2019 10:36:28 AM",
+      "dateFinished": "Mar 18, 2019 10:36:28 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Creating a row for each struct element : explode",
+      "text": "batDF \u003d (sampleDF.select(\"key\", explode(\"batters.batter\")).select(\"key\", \"col.id\", \"col.type\")\n        .withColumnRenamed(\"id\", \"bat_id\")\n        .withColumnRenamed(\"type\", \"bat_type\"))\nbatDF.show()",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:37:10 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d67"
+          ],
+          "interpreterSettingId": "2DVU5K6XH769741541580060799"
+        }
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 67,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d67",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 106,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d106\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 1,
+        "numTasks": 1,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1544455494129_2091042928",
+      "id": "20181210-152454_197962621_q_CKRUX2KZ2F1552408472",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "+----+------+------------+\n| key|bat_id|    bat_type|\n+----+------+------------+\n|0001|  1001|     Regular|\n|0001|  1002|   Chocolate|\n|0001|  1003|   Blueberry|\n|0001|  1004|Devil\u0027s Food|\n+----+------+------------+\n\n"
+      },
+      "dateCreated": "Dec 10, 2018 3:24:54 PM",
+      "dateSubmitted": "Mar 18, 2019 10:37:10 AM",
+      "dateStarted": "Mar 18, 2019 10:37:11 AM",
+      "dateFinished": "Mar 18, 2019 10:37:11 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Select element from Array : topping",
+      "text": "sampleDF.select(col(\"topping\").getItem(0).id.alias(\"top_id\"), col(\"topping\").getItem(0).type.alias(\"top_type\")).show()",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:38:38 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d68"
+          ],
+          "interpreterSettingId": "2DVU5K6XH769741541580060799"
+        }
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 68,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d68",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 107,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d107\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 1,
+        "numTasks": 1,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1544456800348_-834530822",
+      "id": "20181210-154640_212202279_q_CKRUX2KZ2F1552408472",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "+------+--------+\n|top_id|top_type|\n+------+--------+\n|  5001|    None|\n+------+--------+\n\n"
+      },
+      "dateCreated": "Dec 10, 2018 3:46:40 PM",
+      "dateSubmitted": "Mar 18, 2019 10:38:38 AM",
+      "dateStarted": "Mar 18, 2019 10:38:38 AM",
+      "dateFinished": "Mar 18, 2019 10:38:39 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Creating a row for each Array element : explode",
+      "text": "topDF \u003d (sampleDF.select(\"key\", explode(\"topping\")).select(\"key\", \"col.id\", \"col.type\")\n        .withColumnRenamed(\"id\", \"top_id\")\n        .withColumnRenamed(\"type\", \"top_type\"))\ntopDF.show(10, False)",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:38:50 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d69"
+          ],
+          "interpreterSettingId": "2DVU5K6XH769741541580060799"
+        }
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 69,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d69",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 108,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d108\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 1,
+        "numTasks": 1,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1544455802226_-548474089",
+      "id": "20181210-153002_878264722_q_CKRUX2KZ2F1552408472",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "+----+------+------------------------+\n|key |top_id|top_type                |\n+----+------+------------------------+\n|0001|5001  |None                    |\n|0001|5002  |Glazed                  |\n|0001|5005  |Sugar                   |\n|0001|5007  |Powdered Sugar          |\n|0001|5006  |Chocolate with Sprinkles|\n|0001|5003  |Chocolate               |\n|0001|5004  |Maple                   |\n+----+------+------------------------+\n\n"
+      },
+      "dateCreated": "Dec 10, 2018 3:30:02 PM",
+      "dateSubmitted": "Mar 18, 2019 10:38:50 AM",
+      "dateStarted": "Mar 18, 2019 10:38:50 AM",
+      "dateFinished": "Mar 18, 2019 10:38:51 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Toppings Available for \"donut\"",
+      "text": "foodDF.join(topDF, \"key\").select(\"type\",\"top_type\").show()",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:39:18 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d70",
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d71"
+          ],
+          "interpreterSettingId": "2DVU5K6XH769741541580060799"
+        }
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 70,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d70",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 109,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d109\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          },
+          {
+            "id": 71,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d71",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 110,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d110\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 2,
+        "numTasks": 2,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1544459143443_-773018615",
+      "id": "20181210-162543_1015200264_q_CKRUX2KZ2F1552408472",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "+-----+--------------------+\n| type|            top_type|\n+-----+--------------------+\n|donut|               Maple|\n|donut|           Chocolate|\n|donut|Chocolate with Sp...|\n|donut|      Powdered Sugar|\n|donut|               Sugar|\n|donut|              Glazed|\n|donut|                None|\n+-----+--------------------+\n\n"
+      },
+      "dateCreated": "Dec 10, 2018 4:25:43 PM",
+      "dateSubmitted": "Mar 18, 2019 10:39:18 AM",
+      "dateStarted": "Mar 18, 2019 10:39:18 AM",
+      "dateFinished": "Mar 18, 2019 10:39:19 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "title": "Batters Available for \"cake\"",
+      "text": "foodDF.join(batDF, \"key\").select(\"name\",\"bat_type\").show()",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 10:39:29 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "title": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d72",
+            "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d73"
+          ],
+          "interpreterSettingId": "2DVU5K6XH769741541580060799"
+        }
+      },
+      "paragraphProgress": {
+        "jobs": [
+          {
+            "id": 72,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d72",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 111,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d111\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          },
+          {
+            "id": 73,
+            "jobUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/jobs/job?spark\u003dtrue\u0026id\u003d73",
+            "numTasks": 1,
+            "numCompletedTasks": 1,
+            "stages": [
+              {
+                "id": 112,
+                "completed": true,
+                "stageUrl": "https://api.qubole.com/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.29.195.84%3A8088%2Fproxy%2Fapplication_1552894480046_0002/stages/stage/?id\u003d112\u0026attempt\u003d0",
+                "numCompleteTasks": 1,
+                "numActiveTasks": 0,
+                "numFailedTasks": 0,
+                "numTotalTasks": 1
+              }
+            ],
+            "status": "Success"
+          }
+        ],
+        "numCompletedTasks": 2,
+        "numTasks": 2,
+        "truncated": false
+      },
+      "version": "v1",
+      "jobName": "paragraph_1544459237102_-2093153388",
+      "id": "20181210-162717_1192314113_q_CKRUX2KZ2F1552408472",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "+----+------------+\n|name|    bat_type|\n+----+------------+\n|Cake|Devil\u0027s Food|\n|Cake|   Blueberry|\n|Cake|   Chocolate|\n|Cake|     Regular|\n+----+------------+\n\n"
+      },
+      "dateCreated": "Dec 10, 2018 4:27:17 PM",
+      "dateSubmitted": "Mar 18, 2019 10:39:29 AM",
+      "dateStarted": "Mar 18, 2019 10:39:29 AM",
+      "dateFinished": "Mar 18, 2019 10:39:30 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 1000
+    },
+    {
+      "text": "",
+      "user": "nbhadani@hotels.com",
+      "dateUpdated": "Mar 18, 2019 7:48:00 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/python",
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "version": "v0",
+      "jobName": "paragraph_1552848000889_-229444698",
+      "id": "20190317-184000_1704617375_q_CKRUX2KZ2F1552408472",
+      "dateCreated": "Mar 17, 2019 6:40:00 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 1000
+    }
+  ],
+  "name": "4. Spark - Working with Complex Data Types",
+  "id": "CKRUX2KZ2F1552408472",
+  "angularObjects": {
+    "2DU5CSQPA769741541523108762:shared_process": [],
+    "2DVU5K6XH769741541580060799:shared_process": [],
+    "2DU4QRYJZ769741541523108764:shared_process": [],
+    "2DWSX3YE2769741541523108759:shared_process": []
+  },
+  "config": {
+    "isDashboard": false,
+    "defaultLang": "pyspark"
+  },
+  "info": {},
+  "source": "FCN"
+}
